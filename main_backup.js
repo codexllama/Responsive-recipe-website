@@ -1,8 +1,7 @@
 // Recipe Data with detailed information
-const recipeData = {
-    "butter-chicken": {
+const recipeData = {    "butter-chicken": {
         title: "Butter Chicken",
-        image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop&crop=center",
+        image: "https://via.placeholder.com/400x300/ff7043/ffffff?text=Butter+Chicken",
         description: "Creamy and rich tomato-based curry with tender chicken pieces, perfect with basmati rice or naan bread.",
         prepTime: "30 minutes",
         cookTime: "45 minutes",
@@ -44,10 +43,9 @@ const recipeData = {
         },
         tips: "For best results, marinate the chicken overnight. You can substitute heavy cream with coconut milk for a dairy-free version. Adjust spice level by increasing or decreasing cayenne pepper."
     },
-    
-    "biryani": {
+      "biryani": {
         title: "Chicken Biryani",
-        image: "https://images.unsplash.com/photo-1563379091339-03246963d76a?w=400&h=300&fit=crop&crop=center",
+        image: "https://via.placeholder.com/400x300/ff7043/ffffff?text=Chicken+Biryani",
         description: "Aromatic basmati rice layered with spiced chicken, saffron, and fried onions - a royal feast in every bite.",
         prepTime: "45 minutes",
         cookTime: "1 hour 30 minutes",
@@ -95,7 +93,7 @@ const recipeData = {
 
     "palak-paneer": {
         title: "Palak Paneer",
-        image: "https://images.unsplash.com/photo-1631292784640-2b24be784d5d?w=400&h=300&fit=crop&crop=center",
+        image: "images/palak-paneer.jpg",
         description: "Creamy spinach curry with cubes of paneer cheese, packed with nutrients and bursting with flavor.",
         prepTime: "20 minutes",
         cookTime: "30 minutes",
@@ -140,7 +138,7 @@ const recipeData = {
 
     "samosa": {
         title: "Samosa",
-        image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=300&fit=crop&crop=center",
+        image: "images/samosa.jpg",
         description: "Crispy triangular pastries filled with spiced potatoes and peas, perfect as appetizers or snacks.",
         prepTime: "45 minutes",
         cookTime: "30 minutes",
@@ -189,7 +187,7 @@ const recipeData = {
 
     "tandoori-chicken": {
         title: "Tandoori Chicken",
-        image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&h=300&fit=crop&crop=center",
+        image: "images/tandoori-chicken.jpg",
         description: "Succulent chicken marinated in yogurt and spices, traditionally cooked in a clay oven for that signature smoky flavor.",
         prepTime: "4 hours (including marination)",
         cookTime: "25 minutes",
@@ -233,7 +231,7 @@ const recipeData = {
 
     "dal-tadka": {
         title: "Dal Tadka",
-        image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=300&fit=crop&crop=center",
+        image: "images/dal-tadka.jpg",
         description: "Comfort food at its finest - yellow lentils cooked with aromatic spices and finished with a flavorful tempering.",
         prepTime: "15 minutes",
         cookTime: "30 minutes",
@@ -281,7 +279,7 @@ const recipeData = {
 
     "naan": {
         title: "Garlic Naan",
-        image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&h=300&fit=crop&crop=center",
+        image: "images/naan.jpg",
         description: "Soft, pillowy Indian flatbread infused with garlic and herbs, perfect for scooping up curries and dal.",
         prepTime: "2 hours (including rising time)",
         cookTime: "20 minutes",
@@ -324,7 +322,7 @@ const recipeData = {
 
     "rogan-josh": {
         title: "Rogan Josh",
-        image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=400&h=300&fit=crop&crop=center",
+        image: "images/rogan-josh.jpg",
         description: "Aromatic Kashmiri lamb curry with a rich, deep red sauce made from yogurt and traditional spices.",
         prepTime: "30 minutes",
         cookTime: "1 hour 30 minutes",
@@ -374,7 +372,7 @@ const recipeData = {
 
     "masala-dosa": {
         title: "Masala Dosa",
-        image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop&crop=center",
+        image: "images/masala-dosa.jpg",
         description: "Crispy South Indian crepe made from fermented rice and lentil batter, filled with spiced potato curry.",
         prepTime: "12 hours (including fermentation)",
         cookTime: "45 minutes",
@@ -424,7 +422,7 @@ const recipeData = {
 
     "gulab-jamun": {
         title: "Gulab Jamun",
-        image: "https://images.unsplash.com/photo-1571167513428-8c5473c5fe12?w=400&h=300&fit=crop&crop=center",
+        image: "images/gulab-jamun.jpg",
         description: "Soft, spongy milk dumplings soaked in fragrant rose and cardamom flavored sugar syrup - the king of Indian desserts.",
         prepTime: "30 minutes",
         cookTime: "45 minutes",
@@ -502,14 +500,12 @@ function selectRecipe(recipeId) {
     // Update dropdown button text
     document.getElementById('selected-recipe').textContent = recipe.title;
     
-    // Enable the Show Recipe button
-    const searchButton = document.getElementById('searchButton');
-    searchButton.disabled = false;
-    searchButton.classList.remove('disabled');
-    
     // Close dropdown
     document.getElementById('dropdown-content').classList.remove('show');
     document.querySelector('.dropdown-arrow').style.transform = 'rotate(0deg)';
+    
+    // Show the recipe
+    displayRecipe(recipe);
 }
 
 // Display recipe details
@@ -574,26 +570,64 @@ function searchFromDropdown() {
     }
 }
 
+// Search functionality for text input
+function searchRecipe() {
+    const searchInput = document.getElementById('searchInput');
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    
+    if (!searchTerm) {
+        alert('Please enter a recipe name to search.');
+        return;
+    }
+    
+    // Find matching recipe
+    const matchedRecipe = Object.entries(recipeData).find(([key, recipe]) => 
+        recipe.title.toLowerCase().includes(searchTerm) ||
+        key.toLowerCase().includes(searchTerm)
+    );
+    
+    if (matchedRecipe) {
+        const [recipeId, recipe] = matchedRecipe;
+        currentRecipe = recipeId;
+        document.getElementById('selected-recipe').textContent = recipe.title;
+        displayRecipe(recipe);
+        searchInput.value = '';
+    } else {
+        alert(`No recipe found for "${searchTerm}". Please try a different search term.`);
+    }
+}
+
 // Show welcome screen
 function showWelcome() {
     document.querySelector('.recipe-display').classList.remove('hidden');
     document.getElementById('recipe-content').classList.add('hidden');
     document.getElementById('selected-recipe').textContent = 'Select a Recipe';
-    
-    // Disable the Show Recipe button and reset selection
-    const searchButton = document.getElementById('searchButton');
-    searchButton.disabled = true;
-    searchButton.classList.add('disabled');
-    
     currentRecipe = null;
 }
 
-// Initialize page
+// Keyboard support for search
 document.addEventListener('DOMContentLoaded', function() {
-    // Ensure Show Recipe button starts disabled
-    const searchButton = document.getElementById('searchButton');
-    searchButton.disabled = true;
-    searchButton.classList.add('disabled');
+    const searchInput = document.getElementById('searchInput');
+    
+    searchInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            searchRecipe();
+        }
+    });
+    
+    // Add search suggestions
+    const recipes = Object.values(recipeData).map(recipe => recipe.title);
+    
+    searchInput.addEventListener('input', function() {
+        const value = this.value.toLowerCase();
+        if (value) {
+            const suggestions = recipes.filter(recipe => 
+                recipe.toLowerCase().includes(value)
+            );
+            
+            // You can implement autocomplete dropdown here if needed
+        }
+    });
     
     console.log('Indian Recipe Website loaded successfully!');
     console.log('Available recipes:', Object.keys(recipeData));
