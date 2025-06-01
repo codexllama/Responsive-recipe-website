@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Recipe Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Authentic Indian Recipes</h1>
+            <p>Discover the flavors of India with our traditional recipes</p>
+            
+            <!-- Navigation Dropdown Menu -->
+            <nav class="recipe-nav">
+                <div class="dropdown-container">
+                    <button class="dropdown-btn" onclick="toggleDropdown()">
+                        <span id="selected-recipe">Select a Recipe</span>
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <div class="dropdown-content" id="dropdown-content">
+                        <div class="dropdown-item" onclick="selectRecipe('butter-chicken')">Butter Chicken</div>
+                        <div class="dropdown-item" onclick="selectRecipe('biryani')">Chicken Biryani</div>
+                        <div class="dropdown-item" onclick="selectRecipe('palak-paneer')">Palak Paneer</div>
+                        <div class="dropdown-item" onclick="selectRecipe('samosa')">Samosa</div>
+                        <div class="dropdown-item" onclick="selectRecipe('tandoori-chicken')">Tandoori Chicken</div>
+                        <div class="dropdown-item" onclick="selectRecipe('dal-tadka')">Dal Tadka</div>
+                        <div class="dropdown-item" onclick="selectRecipe('naan')">Garlic Naan</div>
+                        <div class="dropdown-item" onclick="selectRecipe('rogan-josh')">Rogan Josh</div>
+                        <div class="dropdown-item" onclick="selectRecipe('masala-dosa')">Masala Dosa</div>
+                        <div class="dropdown-item" onclick="selectRecipe('gulab-jamun')">Gulab Jamun</div>
+                    </div>
+                </div>                <div class="action-controls">
+                    <button onclick="searchFromDropdown()" id="searchButton" disabled>Show Recipe</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Recipe Display Area -->
+        <div id="recipe-display" class="recipe-display">
+            <div class="welcome-message">
+                <h2>Welcome to Indian Recipe Collection</h2>
+                <p>Select a recipe from the dropdown menu above to view detailed cooking instructions, ingredients, and nutritional information.</p>
+                <div class="featured-recipes">
+                    <h3>Featured Recipes</h3>
+                    <div class="quick-access">
+                        <button class="quick-btn" onclick="selectRecipe('butter-chicken')">🍛 Butter Chicken</button>
+                        <button class="quick-btn" onclick="selectRecipe('biryani')">🍚 Biryani</button>
+                        <button class="quick-btn" onclick="selectRecipe('samosa')">🥟 Samosa</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Recipe Content (Hidden initially) -->
+        <div id="recipe-content" class="recipe-content hidden">
+            <div class="recipe-header">
+                <img id="recipe-image" src="" alt="Recipe Image" class="recipe-main-image">
+                <div class="recipe-info">
+                    <h1 id="recipe-title"></h1>
+                    <p id="recipe-description"></p>
+                    <div class="recipe-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">⏱️ Prep Time:</span>
+                            <span id="prep-time"></span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">🍳 Cook Time:</span>
+                            <span id="cook-time"></span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">👥 Servings:</span>
+                            <span id="servings"></span>
+                        </div>                        <div class="meta-item">
+                            <span class="meta-label">🌶️ Difficulty:</span>
+                            <span id="difficulty"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-details">
+                <div class="ingredients-section">
+                    <h2>🛒 Ingredients</h2>
+                    <ul id="ingredients-list"></ul>
+                </div>
+
+                <div class="instructions-section">
+                    <h2>👩‍🍳 Instructions</h2>
+                    <ol id="instructions-list"></ol>
+                </div>
+
+                <div class="nutrition-section">
+                    <h2>📊 Nutritional Information (per serving)</h2>
+                    <div class="nutrition-grid">
+                        <div class="nutrition-item">
+                            <span class="nutrition-label">Calories</span>
+                            <span id="calories" class="nutrition-value"></span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-label">Protein</span>
+                            <span id="protein" class="nutrition-value"></span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-label">Carbs</span>
+                            <span id="carbs" class="nutrition-value"></span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-label">Fat</span>
+                            <span id="fat" class="nutrition-value"></span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-label">Fiber</span>
+                            <span id="fiber" class="nutrition-value"></span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-label">Sodium</span>
+                            <span id="sodium" class="nutrition-value"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tips-section">
+                    <h2>💡 Chef's Tips</h2>
+                    <div id="tips-content"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Indian Recipe Collection. Made with ❤️ for food lovers.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
