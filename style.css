@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #fff8f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #ff7043;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.recipe-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.recipe-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-card h2 {
+    padding: 15px 20px 0;
+    font-size: 1.4rem;
+    color: #ff7043;
+}
+
+.recipe-card p {
+    padding: 10px 20px 20px;
+    font-size: 0.95rem;
+}
+
+footer {
+    background-color: #eee;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+.search-bar {
+    margin-top: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    color: #ff7043;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #ffd4c2;
+}
