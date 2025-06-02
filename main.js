@@ -2,7 +2,7 @@
 const recipeData = {
     "butter-chicken": {
         title: "Butter Chicken",
-        image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop&crop=center",
+        image: "https://cafedelites.com/wp-content/uploads/2019/01/Butter-Chicken-IMAGE-27.jpg",
         description: "Creamy and rich tomato-based curry with tender chicken pieces, perfect with basmati rice or naan bread.",
         prepTime: "30 minutes",
         cookTime: "45 minutes",
@@ -47,7 +47,7 @@ const recipeData = {
     
     "biryani": {
         title: "Chicken Biryani",
-        image: "https://images.unsplash.com/photo-1563379091339-03246963d76a?w=400&h=300&fit=crop&crop=center",
+        image: "https://www.whiskaffair.com/wp-content/uploads/2020/07/Chicken-Biryani-2-3.jpg",
         description: "Aromatic basmati rice layered with spiced chicken, saffron, and fried onions - a royal feast in every bite.",
         prepTime: "45 minutes",
         cookTime: "1 hour 30 minutes",
@@ -95,7 +95,7 @@ const recipeData = {
 
     "palak-paneer": {
         title: "Palak Paneer",
-        image: "https://images.unsplash.com/photo-1631292784640-2b24be784d5d?w=400&h=300&fit=crop&crop=center",
+        image: "https://allwaysdelicious.com/wp-content/uploads/2019/10/palak-paneer-oh-sq-scaled.jpg",
         description: "Creamy spinach curry with cubes of paneer cheese, packed with nutrients and bursting with flavor.",
         prepTime: "20 minutes",
         cookTime: "30 minutes",
@@ -140,7 +140,7 @@ const recipeData = {
 
     "samosa": {
         title: "Samosa",
-        image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=300&fit=crop&crop=center",
+        image: "https://th.bing.com/th/id/R.5e9d914158f20abde43751bc56170aff?rik=IVjPf86fA0ExdQ&riu=http%3a%2f%2fwww.zedamagazine.com%2fwp-content%2fuploads%2f2018%2f06%2fIndian-Food-Samosa-Dish-HD-Wallpapers.jpg&ehk=CIZsxVe5CLA%2fpZXkiCdJuoTdrhucm2fgYqo%2fkXVfHls%3d&risl=&pid=ImgRaw&r=0",
         description: "Crispy triangular pastries filled with spiced potatoes and peas, perfect as appetizers or snacks.",
         prepTime: "45 minutes",
         cookTime: "30 minutes",
@@ -189,7 +189,7 @@ const recipeData = {
 
     "tandoori-chicken": {
         title: "Tandoori Chicken",
-        image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&h=300&fit=crop&crop=center",
+        image: "https://glebekitchen.com/wp-content/uploads/2016/11/tandoorimarinadechickentikkaclosecrop-1.jpg",
         description: "Succulent chicken marinated in yogurt and spices, traditionally cooked in a clay oven for that signature smoky flavor.",
         prepTime: "4 hours (including marination)",
         cookTime: "25 minutes",
@@ -233,7 +233,7 @@ const recipeData = {
 
     "dal-tadka": {
         title: "Dal Tadka",
-        image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=300&fit=crop&crop=center",
+        image: "https://spicecravings.com/wp-content/uploads/2021/05/Dal-Tadka-Featured.jpg",
         description: "Comfort food at its finest - yellow lentils cooked with aromatic spices and finished with a flavorful tempering.",
         prepTime: "15 minutes",
         cookTime: "30 minutes",
@@ -281,7 +281,7 @@ const recipeData = {
 
     "naan": {
         title: "Garlic Naan",
-        image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&h=300&fit=crop&crop=center",
+        image: "https://th.bing.com/th/id/OIP.WVyip0ngXURy7Licd77dDAHaLG?r=0&rs=1&pid=ImgDetMain",
         description: "Soft, pillowy Indian flatbread infused with garlic and herbs, perfect for scooping up curries and dal.",
         prepTime: "2 hours (including rising time)",
         cookTime: "20 minutes",
@@ -324,7 +324,7 @@ const recipeData = {
 
     "rogan-josh": {
         title: "Rogan Josh",
-        image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=400&h=300&fit=crop&crop=center",
+        image: "https://th.bing.com/th/id/R.438adee7682e56785577603c6b9ed2e5?rik=4%2b8NQJCI%2fPymzQ&riu=http%3a%2f%2fcdn.shopify.com%2fs%2ffiles%2f1%2f2313%2f8987%2farticles%2fRogan_Josh_01_copy_1200x1200.jpg%3fv%3d1625548245&ehk=KohMza3cOs1j61hfZDU1htJZ9EIHS245HTE%2f5GUtQ2U%3d&risl=&pid=ImgRaw&r=0",
         description: "Aromatic Kashmiri lamb curry with a rich, deep red sauce made from yogurt and traditional spices.",
         prepTime: "30 minutes",
         cookTime: "1 hour 30 minutes",
@@ -374,7 +374,7 @@ const recipeData = {
 
     "masala-dosa": {
         title: "Masala Dosa",
-        image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop&crop=center",
+        image: "https://apollosugar.com/wp-content/uploads/2018/12/Masala-Dosa.jpg",
         description: "Crispy South Indian crepe made from fermented rice and lentil batter, filled with spiced potato curry.",
         prepTime: "12 hours (including fermentation)",
         cookTime: "45 minutes",
@@ -424,7 +424,7 @@ const recipeData = {
 
     "gulab-jamun": {
         title: "Gulab Jamun",
-        image: "https://images.unsplash.com/photo-1571167513428-8c5473c5fe12?w=400&h=300&fit=crop&crop=center",
+        image: "https://th.bing.com/th/id/OIP.B32bansRI7RS3yfbUSEBNwHaHa?r=0&rs=1&pid=ImgDetMain",
         description: "Soft, spongy milk dumplings soaked in fragrant rose and cardamom flavored sugar syrup - the king of Indian desserts.",
         prepTime: "30 minutes",
         cookTime: "45 minutes",
